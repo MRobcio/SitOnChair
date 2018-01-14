@@ -57,3 +57,13 @@ nav ul li a {
     font-weight: 700;
 }
 
+.section1 {
+    background-color: black;
+    height: 500px;
+    background-color: #24ba9f;
+    /* FF3.6-15 */
+    background: -moz-linear-gradient(top, #ffffff 0%, #f6f6f6 47%, #d0cfd7 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: -webkit-linear-gradient(top, #ffffff 0%,#f6f6f6 47%,#d0cfd7 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
