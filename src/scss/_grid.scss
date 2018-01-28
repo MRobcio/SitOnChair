@@ -1,7 +1,7 @@
 //grid
 $gap : 0px; //przerwa między wierszami
 $columns : 12; //liczba kolumn
-$brakepoint : 0px; //kiedy kolumny ułożą się obok siebie
+$brakepoint : 1060px; //kiedy kolumny ułożą się obok siebie
 
 .container {
   padding-right: $gap;
