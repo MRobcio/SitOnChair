@@ -1,0 +1,28 @@
+@import "_grid.scss";
+@import "_layout.scss";
+
+$color-main: #24ba9f;
+
+
+
+span {
+  color: #24ba9f;
+  font-weight: bold;
+}
+
+.page-nav ul {
+ list-style: none;
+}
+
+.page-nav li {
+  display: inline-block;
+}
+
+.page-header a {
+  text-decoration: none;
+  color: white;
+}
+
+.main-hero {
+  background-color: black;
+}

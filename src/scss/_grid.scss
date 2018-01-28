@@ -1,0 +1,35 @@
+//grid
+$gap : 0px; //przerwa między wierszami
+$columns : 12; //liczba kolumn
+$brakepoint : 0px; //kiedy kolumny ułożą się obok siebie
+
+.container {
+  padding-right: $gap;
+  padding-left: $gap;
+
+  .row {
+    margin-left: 0px;
+    margin-right: 0px;
+    &:after {
+      display: block;
+      content: '';
+      clear: both;
+    }
+
+    @for $i from 1 through $columns {
+      .col-#{$i}-#{$columns} {
+        box-sizing: border-box;
+        width: (100/12*$i)*1%;
+        float: left;
+        padding-left: $gap;
+        padding-right: $gap;
+        margin-bottom: 2 * $gap;
+
+        @media (min-width: 1060px) {
+          width: (100/$columns*$i)*1%;
+          float: left;
+        }
+      }
+    }
+  }
+}
