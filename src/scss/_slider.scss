@@ -22,6 +22,9 @@
   float: left;
   width: 40px;
   cursor: pointer;
+  &:focus {
+    outline: none;
+  };
 }
 
 .slider-center {
