@@ -85,6 +85,12 @@
     top: 60px;
     left: 1px;
     width: 330px;
+    content: "";
+    background-color: $color-main;
+    display: inline-block;
+    height: 5px;
+    width: 330px;
+    position: absolute;
   }
 }
 
@@ -243,7 +249,7 @@
   }
 }
 
-.advance-plan {s
+.advance-plan {
   a {
     left: 830px;
   }

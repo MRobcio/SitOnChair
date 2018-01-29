@@ -10,255 +10,56 @@
 //---------------------
 //secia
 //---------------------
-@mixin plans {
-  border: 2px solid $color-box;
-  height: 500px;
-  background-color: #f1f1f1;
-  width: 330px;
-  margin: 0 auto;
-  color: $color-box;
-}
-
-@mixin circle-out {
-  content: "";
-  display: inline-block;
-  width: 60px;
-  height: 60px;
-  border: 2px solid $color-box;
-  position: absolute;
-  top: 105px;
-  left: 150px;
-  border-radius: 50px;
-  background-color: #fff;
-}
-
-@mixin circle-in {
-  content: "";
-  display: inline-block;
-  width: 26px;
-  height: 26px;
-  position: absolute;
-  top: 122px;
-  left: 852px;
-  border-radius: 50px;
-  background-color: $color-box;
-}
-
-@mixin box-title {
-  text-align: center;
-  font-weight: 700;
-  margin: 0;
-  padding: 40px 0 20px 0;
-  color: $color-main;
-}
-
-@mixin box-date {
-  position: absolute;
-  top: 85px;
-  left: 25px;
-  font-weight: bold;
-}
-
-@mixin box-price {
-  font-size: 45px;
-  font-weight: bold;
-  position: absolute;
-  margin: 15px auto;
-  top: 15px;
-  left: 30px;
-}
-
-.section-price {
-  background-color: #f1f1f1;
-  height: 725px;
+@mixin box-input {
+  border: 1px solid $color-main;
+  font-size: 25px;
   width: 100%;
-  position: relative;
-  a{
-    text-decoration: none;
-    position: absolute;
-    bottom: 98px;
-    text-transform: uppercase;
-    font-weight: bold;
-    color: $color-white;
-    background-color: $color-main;
-    font-size: 14px;
-    line-height: 35px;
-    //width: 35px;
-    width: 125px;
-    text-align: center;
-    border-radius: 5px;
-  }
-}
-.section-title {
-  padding: 30px 0 85px 3px;
-  margin: 0;
-  font-size: 20px;
+  padding: 0 15px;
+  font-family: 'Raleway', sans-serif;
+  font-weight:300;
   color: #444;
-  &:after {
-    @include products-title;
-    top: 60px;
-    left: 1px;
-    width: 330px;
-  }
+  margin: 0% 0 30px 10px;
 }
 
-.basic-plan {
-  @include plans;
-  background-color: #f9f9f9;
-  h3 {
-    @include box-title;
-  }
-  ul {
-    list-style: none;
-  }
-  &:before {
-    @include circle-out;
-  }
-  &:after {
-    @include circle-in;
-    top: 122px;
-    left: 167px;
-  }
-  .price {
-    @include box-price;
-    sup {
-      font-size: 14px;
-      font-weight: bold;
-    }
-  }
-  .date {
-    @include box-date;
-  }
-}
-
-.standard-plan {
-  @include plans;
-  background-color: $color-main;
-  border-color: $color-main;
-  h3 {
-    @include box-title;
-    color: $color-white;
-  }
-  ul {
-    list-style: none;
-    position: relative;
-  }
-  &:before {
-    @include circle-out;
-    top: 105px;
-    left: 505px;
-    background-color: $color-main;
-    border: 2px solid $color-main;
-  }
-  &:after {
-    @include circle-in;
-    background-color: #fff;
-    top: 123px;
-    left: 521px;
-  }
-  .price {
-    @include box-price;
-    color: $color-main;
-    sup {
-      font-size: 14px;
-    }
-  }
-  .date {
-    @include box-date;
-    color: $color-main;
-  }
-}
-
-.advance-plan {
-  @include plans;
-  background-color: #f9f9f9;
-  h3 {
-    @include box-title;
-  }
-  ul {
-    list-style: none;
-  }
-  &:before {
-    @include circle-out;
-    top: 105px;
-    left: 850px;
-  }
-  &:after {
-    @include circle-in;
-    left: 867px;
-  }
-  .price {
-    @include box-price;
-    sup {
-      font-size: 14px;
-    }
-  }
-  .date {
-    @include box-date;
-  }
-}
-
-.price-box-price {
-  height: 130px;
-  width: 130px;
-  border: 1px solid $color-box;
+.contact-title {
+  margin: 0;
+  padding: 25px 0 45px 10px;
+  font-size: 20px;
   position: relative;
-  border-radius: 50%;
-  margin: 10px auto;
-  background-color: $color-white;
-}
-
-.advance-plan {
-  .price {
-    left: 20px;
+  &:after {
+    content: "";
+    background-color: $color-main;
+    display: inline-block;
+    height: 5px;
+    width: 330px;
+    position: absolute;
+    top: 51px;
+    left: 10px;
   }
 }
 
-.box-price-list {
-  display: inline-block;
-  padding: 0;
-  text-align: center;
-  font-size: 24px;
-  height: 45px;
-  width: 100%;
-  line-height: 45px;
-  li {
-    font-size: 24px;
-    color: #c2c2c2;
-  }
-  li:nth-child(odd) {
-    background-color: #e4e4e4;
-  }
-  li:nth-child(even) {
-    background-color: #f1f1f1;
-  }
+.box-contact {
+  width: 632px;
+  height: 100px;
 }
 
-.standard-plan {
-  li:nth-child(even) {
-    background-color: #e4e4e4;
-  }
-  li:nth-child(odd) {
-    background-color: #f1f1f1;
-  }
+.box-contact-name input[type="text"] {
+  @include box-input;
+  height: 65px;
+
 }
 
-.basic-plan {
-  a {
-    left: 110px;
-  }
+.box-contact-email input[type="email"] {
+  height: 65px;
+  @include box-input;
 }
 
-.standard-plan {
-  a {
-    background-color: $color-white;
-    color: $color-main;
-    left: 465px;
-  }
+.box-contact-texarea textarea{
+  @include box-input;
+  height: 190px;
+  resize: none;
+  margin-left: 10px;
 }
 
-.advance-plan {
-  a {
-    left: 830px;
-  }
-}
+
+
