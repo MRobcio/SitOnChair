@@ -10,15 +10,33 @@
 //secia
 //---------------------
 
+.section-price {
+  background-color: #f1f1f1;
+  height: 725px;
+  width: 100%;
+  border: 1px solid black;
+  position: relative;
+}
+.section-title {
+  padding: 30px 0 85px 3px;
+  margin: 0;
+  font-size: 20px;
+  color: #444;
+  &:after {
+    @include products-title;
+    top: 60px;
+    left: 1px;
+    width: 330px;
+  }
+}
 
-
-
-
-
-
-
-
-
-
-
+.basic-plan, .advance-plan {
+  border: 1px solid black;
+  height: 500px;
+  h3 {
+    text-align: center;
+    color: $color-main;
+    font-weight: 700;
+  }
+}
 
