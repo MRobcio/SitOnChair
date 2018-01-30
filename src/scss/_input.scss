@@ -1,0 +1,112 @@
+@mixin box-input {
+  border: 1px solid $color-main;
+  font-size: 25px;
+  width: 100%;
+  padding: 0 15px;
+  font-family: 'Raleway', sans-serif;
+  font-weight:300;
+  color: #444;
+  margin: 0% 0 30px 10px;
+}
+
+.contact-title {
+  margin: 0;
+  padding: 25px 0 45px 10px;
+  font-size: 20px;
+  position: relative;
+  &:after {
+    content: "";
+    background-color: $color-main;
+    display: inline-block;
+    height: 5px;
+    width: 330px;
+    position: absolute;
+    top: 51px;
+    left: 10px;
+  }
+}
+
+.box-contact {
+  width: 632px;
+  height: 100px;
+}
+
+.box-contact-name input[type="text"] {
+  @include box-input;
+  height: 65px;
+
+}
+
+.box-contact-email input[type="email"] {
+  height: 65px;
+  @include box-input;
+}
+
+.box-contact-texarea textarea{
+  @include box-input;
+  height: 190px;
+  resize: none;
+  margin-left: 10px;
+}
+
+.red-chair img {
+  margin: 70px 0 35px 20px;
+}
+
+.check-box {
+  display: block;
+  position: relative;
+  padding-left: 60px;
+  color: #cacaca;
+  margin: 35px 0;
+  padding-top: 5px;
+  font-size: 17px;
+}
+.check-box input {
+  position: absolute;
+  left: -9999px;
+}
+.checkbox-icon {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 50px;
+  height: 50px;
+  border: 1px solid $color-main;
+  display: inline-block;
+}
+
+.check-box input + .checkbox-icon:before {
+  content:'';
+  background:url(../images/form_ok.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  position:absolute;
+  left:50%;
+  top:50%;
+  width:50px;
+  height:50px;
+  transform:translate(-50%, -50%) scale(0.5);
+  transition:0.5s all;
+  opacity:0;
+}
+.check-box input:checked + .checkbox-icon:before {
+  opacity:1;
+  transform:translate(-50%, -50%) scale(1);
+}
+
+.button-send {
+  background-color: $color-main;
+  color: $color-white;
+  font-size: 25px;
+  font-weight: bold;
+  height: 70px;
+  width: 345px;
+  border-radius: 10px;
+  border: 0;
+  cursor: pointer;
+  text-transform: uppercase;
+  &:focus {
+    outline: none;
+  }
+}
